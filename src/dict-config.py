@@ -1,6 +1,6 @@
 import logging.config
 
-logger = logging.getLogger("my_app")
+logger = logging.getLogger("my_app") # use My own logger
 
 logging_config = {
     "version": 1,
@@ -36,6 +36,7 @@ logging_config = {
 
 def main():
     logging.config.dictConfig(config=logging_config)
+    # logging.info("some mesage") avoid to use it
     logger.debug("This is a debug message")
     logger.info("This is an info message")
     logger.warning("This is a warning message")
